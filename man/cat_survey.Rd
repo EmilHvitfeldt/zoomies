@@ -11,7 +11,7 @@ variables:
 
 \describe{
 \item{catid}{Numeric id of the cat.}
-\item{breedgroup}{Breed group. See \code{breed_group} for more information.}
+\item{breedgroup}{Breed group.}
 \item{sex}{Sex, takes values \code{"female"} and \code{"male"}.}
 \item{age_behaviour}{Age when personality section was answered, in years.}
 \item{other_cats}{Is there other cats living in the same household, takes
