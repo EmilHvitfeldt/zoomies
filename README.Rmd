@@ -1,0 +1,38 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
+
+# zoomies
+
+<!-- badges: start -->
+<!-- badges: end -->
+
+The goal of zoomies is to provide access to the data set from the article [Reliability and Validity of Seven Feline Behavior and Personality Traits](https://www.mdpi.com/2076-2615/11/7/1991).
+
+## Installation
+
+You can install the development version of zoomies from [GitHub](https://github.com/) with:
+
+``` r
+# install.packages("pak")
+pak::pak("EmilHvitfeldt/zoomies")
+```
+
+## Data set
+
+```{r example}
+library(zoomies)
+
+dplyr::glimpse(cat_survey)
+```
