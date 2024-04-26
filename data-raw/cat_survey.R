@@ -10,7 +10,11 @@ cat_survey <- read_xlsx("data-raw/Feline_dataset.xlsx", sheet = 2) |>
     other_cats = tolower(other_cats),
     other_cats = fct(other_cats, c("no", "yes"), "unknown"),
     problematic_behavior = tolower(problematic_behavior),
-    problematic_behavior = fct(problematic_behavior, na = "unknown")
+    problematic_behavior = fct(problematic_behavior, na = "unknown"),
+    age_behaviour = case_when(
+      age_behaviour == "unknown" ~ NA,
+      .default = as.numeric(age_behaviour)
+    )
   )
 
 not_questions <- c(
